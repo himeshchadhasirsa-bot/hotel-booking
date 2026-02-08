@@ -1,0 +1,15 @@
+import express from 'express';
+import { getBlogs, getBlog, getBlogBySlug, createBlog, updateBlog, deleteBlog, addComment, deleteComment, likeBlog, getCategories } from '../controllers/blogController.js';
+import { protect, authorize } from '../middleware/auth.js';
+const router = express.Router();
+router.get('/', getBlogs);
+router.get('/categories', getCategories);
+router.get('/slug/:slug', getBlogBySlug);
+router.get('/:id', getBlog);
+router.post('/', protect, authorize('admin'), createBlog);
+router.put('/:id', protect, authorize('admin'), updateBlog);
+router.delete('/:id', protect, authorize('admin'), deleteBlog);
+router.post('/:id/comments', protect, addComment);
+router.delete('/:id/comments/:commentId', protect, deleteComment);
+router.put('/:id/like', protect, likeBlog);
+export default router;

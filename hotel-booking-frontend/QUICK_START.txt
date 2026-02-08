@@ -1,0 +1,147 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║              🏨 LUXESTAY HOTEL BOOKING SYSTEM - QUICK START              ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│  STEP 1: INSTALLATION                                                     │
+└───────────────────────────────────────────────────────────────────────────┘
+
+  1. Open terminal in the project folder
+  2. Run: npm install
+  3. Wait for dependencies to install
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│  STEP 2: START DEVELOPMENT SERVER                                        │
+└───────────────────────────────────────────────────────────────────────────┘
+
+  1. Run: npm run dev
+  2. Open browser to: http://localhost:3000
+  3. App is now running!
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│  TESTING DIFFERENT ROLES                                                  │
+└───────────────────────────────────────────────────────────────────────────┘
+
+  To test different dashboard roles:
+  
+  1. Open: src/pages/Login.jsx
+  2. Find line 16: role: 'user'
+  3. Change to: 'admin', 'manager', 'receptionist', 'waiter', 'cook', or 'user'
+  4. Login with any email/password
+  5. You'll be redirected to the appropriate dashboard
+
+  ROLE MAPPINGS:
+  ├─ admin         → /dashboard/admin (Full statistics)
+  ├─ manager       → /dashboard/employee (Time greeting)
+  ├─ receptionist  → /dashboard/employee (Time greeting)
+  ├─ waiter        → /dashboard/employee (Time greeting)
+  ├─ cook          → /dashboard/employee (Time greeting)
+  └─ user          → /dashboard/user (Profile & bookings)
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│  ALL AVAILABLE PAGES                                                      │
+└───────────────────────────────────────────────────────────────────────────┘
+
+  PUBLIC PAGES:
+  ├─ /              → Home (Hero, Features, Stats, Testimonials)
+  ├─ /hotels        → Hotels Listing (Search & Filters)
+  ├─ /hotels/:id    → Hotel Details (Booking Form)
+  ├─ /about         → About Us (Story, Values, Team)
+  ├─ /services      → Services (All offerings)
+  ├─ /contact       → Contact (Form + Google Maps)
+  ├─ /blogs         → Blogs Listing (Cards)
+  └─ /blogs/:id     → Blog Detail (Full article)
+
+  AUTHENTICATION:
+  ├─ /login         → Login Page
+  └─ /register      → Register Page
+
+  DASHBOARDS (Protected):
+  ├─ /dashboard/admin      → Admin Dashboard
+  ├─ /dashboard/employee   → Employee Dashboard
+  └─ /dashboard/user       → User Dashboard
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│  KEY FEATURES                                                             │
+└───────────────────────────────────────────────────────────────────────────┘
+
+  ✓ Professional Design System
+  ✓ Fully Responsive (Mobile/Tablet/Desktop)
+  ✓ Role-Based Access Control
+  ✓ Time-Based Greetings (Good Morning/Afternoon/Evening/Night)
+  ✓ Search & Filter Hotels
+  ✓ Booking Management
+  ✓ Profile Management
+  ✓ Blog System
+  ✓ Google Maps Integration
+  ✓ Smooth Animations
+  ✓ Protected Routes
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│  PROJECT STRUCTURE                                                        │
+└───────────────────────────────────────────────────────────────────────────┘
+
+  hotel-booking-frontend/
+  ├─ src/
+  │  ├─ components/common/    # Header, Footer
+  │  ├─ context/              # Authentication
+  │  ├─ pages/                # All pages
+  │  ├─ styles/               # Global CSS
+  │  ├─ App.jsx               # Main app + routing
+  │  └─ main.jsx              # Entry point
+  ├─ public/                  # Static files
+  ├─ README.md                # Full documentation
+  ├─ SETUP_GUIDE.md           # Installation guide
+  ├─ FEATURES_CHECKLIST.md    # Feature list
+  └─ package.json             # Dependencies
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│  USEFUL COMMANDS                                                          │
+└───────────────────────────────────────────────────────────────────────────┘
+
+  npm run dev        → Start development server
+  npm run build      → Build for production
+  npm run preview    → Preview production build
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│  DESIGN SYSTEM                                                            │
+└───────────────────────────────────────────────────────────────────────────┘
+
+  COLORS:
+  ├─ Primary:    #1a3a52 (Deep Blue)
+  ├─ Secondary:  #c9a961 (Gold)
+  ├─ Background: #fafaf8 (Off White)
+  └─ Surface:    #ffffff (White)
+
+  FONTS:
+  ├─ Display: Playfair Display (Headers)
+  └─ Body:    Lato (Content)
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│  NEXT STEPS                                                               │
+└───────────────────────────────────────────────────────────────────────────┘
+
+  1. ✅ Frontend Complete (You are here)
+  2. → Build Backend APIs
+  3. → Connect Frontend to Backend
+  4. → Add Authentication
+  5. → Deploy to Production
+
+┌───────────────────────────────────────────────────────────────────────────┐
+│  DOCUMENTATION                                                            │
+└───────────────────────────────────────────────────────────────────────────┘
+
+  📖 README.md              - Complete project overview
+  📖 SETUP_GUIDE.md         - Detailed installation & configuration
+  📖 FEATURES_CHECKLIST.md  - All implemented features
+  📖 QUICK_START.txt        - This file
+
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║                    🎉 READY TO START CODING! 🚀                          ║
+║                                                                           ║
+║              Run: npm install && npm run dev                              ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝

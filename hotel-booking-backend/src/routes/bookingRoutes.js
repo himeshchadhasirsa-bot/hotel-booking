@@ -1,0 +1,13 @@
+import express from 'express';
+import { createBooking, getAllBookings, getMyBookings, getBooking, updateBookingStatus, cancelBooking, deleteBooking, getBookingStats } from '../controllers/bookingController.js';
+import { protect, authorize } from '../middleware/auth.js';
+const router = express.Router();
+router.post('/', protect, createBooking);
+router.get('/my-bookings', protect, getMyBookings);
+router.get('/stats/overview', protect, authorize('admin'), getBookingStats);
+router.get('/:id', protect, getBooking);
+router.put('/:id/cancel', protect, cancelBooking);
+router.get('/', protect, authorize('admin'), getAllBookings);
+router.put('/:id/status', protect, authorize('admin'), updateBookingStatus);
+router.delete('/:id', protect, authorize('admin'), deleteBooking);
+export default router;

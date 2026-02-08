@@ -1,0 +1,12 @@
+import express from 'express';
+import { getHotels, getHotel, createHotel, updateHotel, deleteHotel, getFeaturedHotels, getHotelStats } from '../controllers/hotelController.js';
+import { protect, authorize } from '../middleware/auth.js';
+const router = express.Router();
+router.get('/', getHotels);
+router.get('/featured', getFeaturedHotels);
+router.get('/stats/overview', protect, authorize('admin'), getHotelStats);
+router.get('/:id', getHotel);
+router.post('/', protect, authorize('admin'), createHotel);
+router.put('/:id', protect, authorize('admin'), updateHotel);
+router.delete('/:id', protect, authorize('admin'), deleteHotel);
+export default router;
